@@ -25,6 +25,20 @@ describe('Tasks Management', () => {
     cy.get('.todo-count').contains('2 items left');
   })
 
+  it('Clear Completed is available after a todo is completed', () => {
+    cy.setUp();
+    cy.get('input.toggle').first().click();
+    cy.get('button.clear-completed').should('be.visible');
+  })
+
+  it('completed todo no longer exists after clicking Clear Completed', () => {
+    cy.setUp();
+    const firstInput = cy.get('input.toggle').first();
+    firstInput.click();
+    cy.get('button.clear-completed').click();
+    firstInput.should('not.exist');
+  })
+
 
 
 })
