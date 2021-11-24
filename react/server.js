@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 
 app.use((req, res) => {
-  res.sendFile('/home/dev/repos/react-todoMVC-example/react');
+  res.sendFile('/home/dev/repos/react-todoMVC-example/react/');
 });
 
 app.listen(3000, () => {
