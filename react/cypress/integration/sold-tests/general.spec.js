@@ -10,7 +10,7 @@ describe('General tests', () => {
   })
 
   it('should focus input when page is visited', () => {
-    cy.focused().should('have.attr', 'class', 'new-todo');
+    cy.focused().should('have.class', 'new-todo');
   })
 
   it('should show empty input after submitting todo', () => {
